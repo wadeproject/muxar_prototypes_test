@@ -1,0 +1,14 @@
+{
+  "name": "muxar_prototypes_test",
+  "version": "0.0.1",
+  "description": "Test projects for muxar_wade",
+  "repository": "https://github.com/wadeproject/muxar_prototypes_test",
+  "dependencies": {
+    "bower": "^1.6.8",
+    "express": "^4.13.3"
+  },
+  "scripts": {
+    "postinstall": "bower update",
+    "prestart": "npm update"
+  }
+}
