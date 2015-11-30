@@ -44,6 +44,7 @@ router.route('/users/:user_id')
 
 //Static routes
 app.use(express.static('bower_components'));
+app.use(express.static('front_end'));
 
 //Set routes
 app.use('/', router);
