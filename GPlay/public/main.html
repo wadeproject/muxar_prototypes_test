@@ -52,25 +52,11 @@
 							</md-card-title>
 							<md-card-content>
 								<md-list>
-									<md-list-item class="md-2-line">
+									<md-list-item ng-repeat="song in sampleSongs" class="md-2-line">
 										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
 										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
+											<h3>{{song.artists}} - {{song.song}}</h3>
+											<p>From the album : {{song.album}}</p>
 										</div>
 									</md-list-item>
 								</md-list>
@@ -86,25 +72,11 @@
 							</md-card-title>
 							<md-card-content layout="row" layout-align="space-between">
 								<md-list>
-									<md-list-item class="md-2-line">
+									<md-list-item ng-repeat="song in sampleSongs" class="md-2-line">
 										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
 										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band - Some song</h3>
-											<p>Secondary text</p>
+											<h3>{{song.artists}} - {{song.song}}</h3>
+											<p>From the album : {{song.album}}</p>
 										</div>
 									</md-list-item>
 								</md-list>
@@ -120,25 +92,11 @@
 							</md-card-title>
 							<md-card-content layout="row" layout-align="space-between">
 								<md-list>
-									<md-list-item class="md-2-line">
+									<md-list-item ng-repeat="song in sampleSongs" class="md-2-line">
 										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
 										<div class="md-list-item-text">
-											<h3>Some band</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band</h3>
-											<p>Secondary text</p>
-										</div>
-									</md-list-item>
-									<md-list-item class="md-2-line">
-										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
-										<div class="md-list-item-text">
-											<h3>Some band</h3>
-											<p>Secondary text</p>
+											<h3>{{song.artists}} - {{song.song}}</h3>
+											<p>From the album : {{song.album}}</p>
 										</div>
 									</md-list-item>
 								</md-list>
@@ -162,6 +120,29 @@
 				//call http post on logout do clear session
 				$window.location.href = "/index.html"
 			}
+			
+			$scope.sampleSongs = [
+				{
+					"artists" : "Robbie Williams, Other Band",
+					"song" : "Greatest Hit",
+					"album" : "Greatest Album"
+				},
+				{
+					"artists" : "Skrillex",
+					"song" : "Equinox",
+					"album" : "Some Album"
+				},
+				{
+					"artists" : "Woodkid",
+					"song" : "Iron",
+					"album" : "Metals"
+				},
+				{
+					"artists" : "Nightwish",
+					"song" : "Nemo",
+					"album" : "Nemo"
+				}
+			]
 		
 			$scope.goToSearch = function () {
 				$window.location.href = "/search.html"
