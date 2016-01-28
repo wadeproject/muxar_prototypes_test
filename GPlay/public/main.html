@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" lang="en ng-app">
+	<head>
+		<title>Muxar - Main page mock-up</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="https://material.angularjs.org/latest/angular-material.min.css"/>
+
+		<style type="text/css">
+			/**
+			 * Hide when Angular is not yet loaded and initialized
+			 */
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+				display: none !important;
+			}
+			
+			.down-sidebar {
+				margin-top : 64px;
+			}
+			
+		</style>
+	</head>
+
+	<body data-ng-app="muxer" layout="row" data-ng-cloak class="md-body-2">	
+
+	<div ng-controller="main" layout="column" style="height:100%; width: 100%" ng-cloak>
+	
+		<section layout="row" flex>
+			<md-content layout-fill>
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<h1> MUXar - Musical UX Smart Enhancer</h1>
+						<span flex></span>
+						<h3>
+							<md-button><md-icon md-svg-src="./images/ic_search_48px.svg" aria-label="Search"></md-icon></md-button>
+							<md-button><md-icon md-svg-src="./images/ic_person_outline_48px.svg" aria-label="User"></md-icon> Hello User</md-button>
+							<md-button>Logout</md-button>
+						</h3>
+					</div>
+				</md-toolbar>
+			
+				<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
+					<div flex layout="column">
+						<md-card layout-padding>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Based on your favorite artists</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+								<md-list>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+								</md-list>
+							</md-card-content>
+						</md-card>
+					</div>
+					<div flex layout="column">
+						<md-card layout-padding>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Based on your favorite albums</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content layout="row" layout-align="space-between">
+								<md-list>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band - Some song</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+								</md-list>
+							</md-card-content>
+						</md-card>
+					</div>
+					<div flex layout="column">
+						<md-card layout-padding>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Based on your favorite songs</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content layout="row" layout-align="space-between">
+								<md-list>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-2-line">
+										<img ng-src="./images/ic_music_note_48px.svg" class="md-avatar" alt="some icon" />
+										<div class="md-list-item-text">
+											<h3>Some band</h3>
+											<p>Secondary text</p>
+										</div>
+									</md-list-item>
+								</md-list>
+							</md-card-content>
+						</md-card>
+					</div>
+				</md-content>
+			</md-content>
+		</section>
+	</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-aria.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.js"></script>
+		
+		<script type="text/javascript">
+		angular.module('muxer', ['ngMaterial', 'ngAnimate']).controller('main', function ($scope, $timeout, $log) {
+		})
+		.config(function($mdThemingProvider) {
+			$mdThemingProvider.theme('default').primaryPalette('blue').accentPalette('red');
+		});
+		</script>
+		
+  </body>
+</html>

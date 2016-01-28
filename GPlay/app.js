@@ -35,4 +35,5 @@ app.use('/api', playlists);
 //app.use('/api', artists);
 app.use('/api', interests);
 app.use('/api', trackdata);
+app.use(express.static('public'));
 module.exports = app;
