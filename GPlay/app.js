@@ -1,11 +1,14 @@
 var bodyParser = require('body-parser');
 var express = require('express');
+var expressSession = require('express-session');
+var cookieParser = require('cookie-parser'); // the session is stored in a cookie, so we use this to parse it
+
 var playlists = require('./routes/playlists');
 var artists = require('./routes/artist');
-var tracks = require('./routes/tracks');
 var genres = require('./routes/genre');
 var login = require('./routes/googlePlayLogin');
 var interests = require('./routes/interests');
+var trackdata = require('./routes/trackData');
 
 var app = express();
 var router = express.Router();
@@ -14,6 +17,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	"extended" : false
 }));
+
+app.use(cookieParser());
+app.use(expressSession({secret:'somesecrettokenhere'}));
+app.use(bodyParser());
 
 router.get("/", function(req, res) {
 	res.json({
@@ -25,8 +32,7 @@ router.get("/", function(req, res) {
 app.use('/api', login);
 app.use('/api', genres);
 app.use('/api', playlists);
-app.use('/api', artists);
-app.use('/api', tracks);
+//app.use('/api', artists);
 app.use('/api', interests);
-
+app.use('/api', trackdata);
 module.exports = app;

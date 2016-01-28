@@ -7,6 +7,7 @@ var util = require('util');
 
 var router = express.Router();
 
+//TODO 
 router.route('/interests/artists').get(function(req, res) {
 	var auth = 'Basic ' + new Buffer('dav' + ':' + 'dav').toString('base64');
 	request({
