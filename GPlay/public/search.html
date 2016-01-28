@@ -30,8 +30,9 @@
 			<md-content layout-fill>
 				<md-toolbar>
 					<div class="md-toolbar-tools">
-						<h1> MUXar - Musical UX Smart Enhancer</h1>
+						<h1><a href="/main.html"> MUXar - Musical UX Smart Enhancer </a></h1>
 						<span flex></span>
+						<md-button ng-click="doLogout()">Logout</md-button>
 					</div>
 				</md-toolbar>
 				<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
@@ -78,6 +79,11 @@
 		angular.module('muxer', ['ngMaterial', 'ngAnimate']).controller('main', function ($scope, $timeout, $http, $log) {
 			$scope.preferences = ['By Artist', 'By Album', 'By Song'];
 			$scope.selectedPreference = $scope.preferences[0];
+			
+			$scope.doLogout = function() {
+				//call http post on logout do clear session
+				$window.location.href = "/index.html"
+			}
 			
 			$scope.doSearch = function(keywords) {
 				console.log($scope.selectedPreference + " : " + keywords);

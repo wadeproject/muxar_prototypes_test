@@ -36,9 +36,8 @@
 						<h1> MUXar - Musical UX Smart Enhancer</h1>
 						<span flex></span>
 						<h3>
-							<md-button><md-icon md-svg-src="./images/ic_search_48px.svg" aria-label="Search"></md-icon></md-button>
-							<md-button><md-icon md-svg-src="./images/ic_person_outline_48px.svg" aria-label="User"></md-icon> Hello User</md-button>
-							<md-button>Logout</md-button>
+							<md-button ng-click="goToSearch()"><md-icon md-svg-src="./images/ic_search_48px.svg" aria-label="Search"></md-icon></md-button>
+							<md-button ng-click="doLogout()">Logout</md-button>
 						</h3>
 					</div>
 				</md-toolbar>
@@ -158,7 +157,15 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.js"></script>
 		
 		<script type="text/javascript">
-		angular.module('muxer', ['ngMaterial', 'ngAnimate']).controller('main', function ($scope, $timeout, $log) {
+		angular.module('muxer', ['ngMaterial', 'ngAnimate']).controller('main', function ($scope, $location, $window, $http, $timeout, $log) {
+			$scope.doLogout = function() {
+				//call http post on logout do clear session
+				$window.location.href = "/index.html"
+			}
+		
+			$scope.goToSearch = function () {
+				$window.location.href = "/search.html"
+			}
 		})
 		.config(function($mdThemingProvider) {
 			$mdThemingProvider.theme('default').primaryPalette('blue').accentPalette('red');
